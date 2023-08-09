@@ -50,8 +50,8 @@ RUN nasher config --nssFlags:"-lowkey" &&  \
     nasher config --abortOnCompileError true
 
 # Configure empty workdir for github to use
-RUN mkdir -pv /nasher
-WORKDIR /nasher
+RUN mkdir -pv /github/workspace
+WORKDIR /github/workspace
 
 # Set default command run by container
 ENTRYPOINT [ "nasher" ]
