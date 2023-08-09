@@ -43,7 +43,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ${{ env.REGISTRY }}/ardesco/nasher4gh
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=${{ github.event.inputs.nwn_server }}_${{ github.event.inputs.nasher }}_${{ github.event.inputs.docker_version }}
 
