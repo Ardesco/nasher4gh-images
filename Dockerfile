@@ -43,16 +43,13 @@ RUN nimble install nasher@#${NASHER_VERSION} -y &&  \
     chmod +x /root/.nimble/bin/nasher
 ENV PATH="/root/.nimble/bin/:$PATH"
 ENV NWN_ROOT="${NWSERVER_DATA_PATH}"
-# Configure nasher
-RUN nasher config --nssFlags:"-lowkey" &&  \
-    nasher config --userName:"nasher" &&  \
-    nasher config --packUnchanged true && \
-    nasher config --abortOnCompileError true
 
 # Configure empty workdir for github to use
 RUN mkdir -pv /github/workspace
 WORKDIR /github/workspace
 
 # Set default command run by container
-ENTRYPOINT [ "nasher" ]
+COPY ./entrypoint.sh /usr/local/bin
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT [ "entrypoint.sh" ]
 CMD [ "--help" ]
