@@ -43,6 +43,7 @@ RUN nimble install nasher@#${NASHER_VERSION} -y &&  \
     chmod +x /root/.nimble/bin/nasher
 ENV PATH="/root/.nimble/bin/:$PATH"
 ENV NWN_ROOT="${NWSERVER_DATA_PATH}"
+ENV NWN_HOME="${NWSERVER_DATA_PATH}"
 
 # Configure empty workdir for github to use
 RUN mkdir -pv /github/workspace
