@@ -9,7 +9,7 @@ on:
       nasher:
         description: 'Version of Nasher to use'
         required: true
-        default: "0.20.2"
+        default: "0.21.0"
       nwn_server:
         description: 'Version of NWServer to use'
         required: true
