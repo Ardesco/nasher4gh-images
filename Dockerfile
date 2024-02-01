@@ -2,7 +2,7 @@ FROM debian:bookworm-slim
 
 ARG NWNSERVER_VERSION="8193.35-40"
 ARG NWNSC_VERSION="1.1.5"
-ARG NIM_VERSION="1.6.14"
+ARG NIM_VERSION="2.0.0"
 ARG NASHER_VERSION="0.21.0"
 
 LABEL maintainer="Mark Collin (@Ardesco)"
