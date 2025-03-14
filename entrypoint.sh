@@ -13,7 +13,7 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     -usenwnscriptcomp)
-      DEFAULT_OPTIONS=("--nssFlags:\"-yc\"" "--nssCompiler:/root/.nimble/bin/nwn_script_comp" "--userName:\"nasher\"" "--packUnchanged true" "--abortOnCompileError true")
+      DEFAULT_OPTIONS=("--nssFlags:\"-y\"" "--nssCompiler:/root/.nimble/bin/nwn_script_comp" "--userName:\"nasher\"" "--packUnchanged true" "--abortOnCompileError true")
       shift
       ;;
     *)
